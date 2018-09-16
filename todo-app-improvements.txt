@@ -1,0 +1,5 @@
+
+Dictionary App
+    - Extend the app to work with a Web UI
+    - Data file used is costly. Implement using a DB Fetch
+
