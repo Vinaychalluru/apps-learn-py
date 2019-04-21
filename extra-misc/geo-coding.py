@@ -2,12 +2,16 @@
 # Reverse Geo Coding - Cordinates to address
 
 # Nominatim is one of the Geocoders available
+# There's a bug with Nominatim and so using GoogleV3
 from geopy.geocoders import Nominatim
+from geopy.geocoders import GoogleV3
+nom = GoogleV3(scheme = "http")
 from pandas import read_csv
 import traceback
 
 try :
-    nom=Nominatim(user_agent='my-app')
+    # nom=Nominatim(user_agent='my-app')
+    nom = GoogleV3(scheme="http")
 
     n=nom.geocode('Some Non Existent Address')
     print("Non Existent Address returned:", n)

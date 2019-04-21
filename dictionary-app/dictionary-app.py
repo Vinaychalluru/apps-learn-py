@@ -5,7 +5,7 @@ from difflib import get_close_matches
 import random
 
 
-with open("D:/Practise/Python/apps-learn-py/dictionary-app/assets/dict-master-data.json", "r") as dict_fp:
+with open("../assets/dict-master-data.json", "r") as dict_fp:
     dict_data = json.load(dict_fp)
     # print(type(dict_data))
 
@@ -31,6 +31,8 @@ def find_meaning(user_word):
                     return dict_data[w]
             else:
                 return word_not_found
+        else :
+            return word_not_found
 
 
 # Custom function find_meaning2 implements a costly or inefficient way
